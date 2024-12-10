@@ -172,3 +172,64 @@ body{
   transform: rotate(45deg);
   z-index: -1;
 }
+
+
+/SkillGuide/
+
+
+.bento-grid {
+  display: grid;
+  gap: var(--space);
+}
+
+@media (min-width: 50rem) {
+  .bento-grid {
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    grid-template-rows: repeat(var(--row-count, 3), auto);
+  }
+
+  .bento-grid > * {
+    grid-column: var(--col);
+    grid-row: var(--row);
+  }
+}
+
+
+
+section {
+  margin-inline: auto;
+  width: min(1000px, 100%);
+}
+
+section + section {
+  margin-block-start: 4rem;
+  padding-block-start: 4rem;
+  border-block-start: 2px dashed var(--surface-2);
+}
+
+
+.item h2 {
+  font-weight: 600;
+  font-size: 1.65rem;
+  line-height: 1.1;
+}
+
+.item {
+  border: 1px solid var(--surface-3);
+  background-color: var(--surface-2);
+  background-image: var(--gradient);
+  padding: var(--space);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.item > * + * {
+  margin-block-start: 1.125rem;
+}
+
+.item:hover{
+  box-shadow: 0 0 20px 5px rgba(173, 173, 174, 0.8), 0 0 60px 15px rgba(224, 224, 229, 0.6);
+  border-color: rgba(0, 0, 255, 0.8);
+  transform: scale(1.1);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.6s ease;
+}
