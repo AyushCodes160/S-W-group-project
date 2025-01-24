@@ -54,7 +54,7 @@ a {
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
     color: #fff;
-    height: 80vh;
+    height: 81vh;
     display: flex;
     justify-content: center;
     align-items: center;
